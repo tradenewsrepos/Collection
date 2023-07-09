@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  collection:
+    env_file:
+      - .env
+    build: .
+    container_name: tn_collection
+    volumes:
+      - /home/lutova-da/trade_news/data/brat/data/trade_news_auto_labelling:/trade_news_auto_labelling
+      - /home/lutova-da/trade_news/trade_news_collection/logs:/logs

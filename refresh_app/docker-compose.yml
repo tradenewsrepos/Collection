@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  refresh:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tn_refresh
+    volumes:
+      - /home/lutova-da/trade_news/refresh_app/logs:/logs

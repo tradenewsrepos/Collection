@@ -1,0 +1,6 @@
+**/test.py
+**/venv
+**/__pycache__/**
+refresh_app/make_main_table/make_main_table.egg-info
+**/.env
+**/logs

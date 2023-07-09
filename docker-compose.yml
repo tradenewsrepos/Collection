@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  collection:
+    build:
+      dockerfile: collection_app/Dockerfile
+      context: collection_app
+    env_file:
+      - collection_app/.env
+    container_name: tn_collection
+    volumes:
+      - /home/lutova-da/trade_news/data/brat/data/trade_news_auto_labelling:/trade_news_auto_labelling
+      - /home/lutova-da/trade_news/trade_news_collection/logs:/logs
+  refresh:
+    env_file:
+      - refresh_app/.env
+    build:
+      dockerfile:  refresh_app/Dockerfile
+      context: refresh_app   
+    container_name: tn_refresh
+    volumes:
+      - /home/lutova-da/trade_news/trade_news_collection/logs:/logs

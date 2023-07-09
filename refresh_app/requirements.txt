@@ -1,0 +1,8 @@
+-e ./make_main_table
+fire==0.4.0
+requests==2.22.0
+psycopg2-binary>=2.8.4
+sqlalchemy==1.4
+pymorphy2==0.9.1
+razdel
+tqdm==4.64.1

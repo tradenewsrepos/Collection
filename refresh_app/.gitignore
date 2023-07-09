@@ -1,0 +1,6 @@
+**/test/**
+**/venv/**
+.vscode/**
+**/__pycache__/**
+/make_main_table/make_main_table.egg-info
+**/.env
